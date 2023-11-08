@@ -28,6 +28,12 @@ export default defineConfig({
           { text: 'View', link: '/view' },
           { text: 'Config', link: '/config' },
         ]
+      },
+      {
+        text: 'Lebih Lanjut',
+        items: [
+          { text: 'ComBobox', link: '/combobox' },
+        ]
       }
     ],
 
