@@ -16,11 +16,14 @@ hero:
       link: https://github.com/UmarMansyur/desktop-programming
 
 features:
-  - title: Efisien File
+  - icon: 🗂️
+    title: Efisien File
     details: Konsep MVC memungkinkan pengembangan aplikasi yang efisien dalam hal file.
-  - title: Memudahkan Pengembangan dan Maintenance
+  - icon: ⚒️
+    title: Memudahkan Pengembangan dan Maintenance
     details: Pengembangan dan maintenance aplikasi menjadi lebih mudah karena terdapat pemisahan antara tampilan, logika, dan data.
-  - title: Kode yang Bersih
+  - icon: 🧹
+    title: Kode yang Bersih
     details: Kode yang dihasilkan menjadi lebih bersih karena terdapat pemisahan antara tampilan, logika, dan data.
 ---
 
