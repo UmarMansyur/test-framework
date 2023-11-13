@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "Pemrograman Visual"
   text: "Menggunakan .net dan C#"
-  tagline: "Praktikum Pemrograman Visual Implementasi MVC"
+  tagline: "Implementasi MVC"
   image: https://unira.ac.id/img/logo.png
   actions:
     - theme: brand
