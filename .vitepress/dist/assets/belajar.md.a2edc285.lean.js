@@ -1,0 +1,1 @@
+import{_ as s,o as a,c as n,Q as l}from"./chunks/framework.361cb293.js";const g=JSON.parse('{"title":"Instalasi .net dan C#","description":"","frontmatter":{},"headers":[],"relativePath":"belajar.md","filePath":"belajar.md"}'),p={name:"belajar.md"},e=l("",19),o=[e];function t(i,c,r,d,h,E){return a(),n("div",null,o)}const u=s(p,[["render",t]]);export{g as __pageData,u as default};

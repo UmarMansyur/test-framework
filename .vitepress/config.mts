@@ -7,7 +7,7 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Home', link: '/' },
+      { text: 'Beranda', link: '/' },
       { text: 'Instalasi', link: '/instalasi' }
     ],
 
@@ -32,7 +32,7 @@ export default defineConfig({
       {
         text: 'Lebih Lanjut',
         items: [
-          { text: 'ComBobox', link: '/combobox' },
+          { text: 'ComboBox', link: '/combobox' },
         ]
       }
     ],

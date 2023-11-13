@@ -1,0 +1,1 @@
+import{_ as a,o as t,c as n,Q as i}from"./chunks/framework.361cb293.js";const k=JSON.parse('{"title":"Instalasi","description":"","frontmatter":{},"headers":[],"relativePath":"instalasi.md","filePath":"instalasi.md"}'),s={name:"instalasi.md"},l=i("",13),e=[l];function o(r,d,g,m,u,c){return t(),n("div",null,e)}const h=a(s,[["render",o]]);export{k as __pageData,h as default};
