@@ -85,7 +85,6 @@ ComboBox1.Items.Add(new ComboBox(3, "Pilihan 3"));
 4. Kemudian, ketika event button di klik, ketikkan kode berikut:
 
 ```csharp
-
 private void button1_Click(object sender, EventArgs e)
 {
     ComboBox comboBox = (ComboBox)ComboBox1.SelectedItem;
