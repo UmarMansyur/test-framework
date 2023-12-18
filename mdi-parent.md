@@ -27,7 +27,7 @@ Menu strip merupakan menu yang terdapat di atas form. Menu strip ini dapat dibua
 
 <img src="/assets/menustrip.png" alt="MenuStrip" width="500"/>
 
-Setelah __MenuStrip__ ditambahkan ke form. Kita coba hubungkan form login yang telah dibuat sebelumnya ke menu strip. Jika belum membuat form login, silahkan buat terlebih dahulu. Kunjungi menu [Authentication](/Authentication) untuk membuat form login.
+Setelah __MenuStrip__ ditambahkan ke form. Kita coba hubungkan form login yang telah dibuat sebelumnya ke menu strip. Jika belum membuat form login, silahkan buat terlebih dahulu. Kunjungi menu <a href="./authentication.md">Authentication</a> untuk membuat form login.
 
 ## Routing
 Pada menu strip terdapat menu `Masuk`. Untuk menghubungkan menu `Masuk` ke form login, maka dapat dilakukan dengan cara sebagai berikut:
