@@ -47,6 +47,7 @@ export default defineConfig({
           { text: 'Authentication', link: '/authentication' },
           { text: 'MDI Parent', link: '/mdi-parent' },
           { text: 'Base Controller', link: '/base-controller' },
+          { text: 'Data Master', link: 'data-master' },
         ]
       }
     ],
