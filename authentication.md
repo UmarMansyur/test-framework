@@ -1,68 +1,67 @@
 # Authentication
 
 ## Membuat Koneksi ke Database
-Untuk membuat autentikasi, kita perlu membuat sebuah class di dalam direktori Controllers. Namun sebelum itu, pastikan folder configs sudah memiliki class Connection.cs. Jika belum buatlah class tersebut dengan kode berikut:
+Untuk membuat autentikasi, kita perlu membuat sebuah class di dalam direktori `Controllers`. Namun sebelum itu, pastikan folder `Config` sudah memiliki class `Connection.cs`. Jika belum buatlah class tersebut dengan kode berikut:
 
 ```csharp
-using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
-using System.Text;
-using MySql.Data.MySqlClient;
+using MySql.Data.MySqlClient; // [!code ++]
+using System.Windows.Forms; // [!code ++]
 
 namespace project_akhir.Config
 {
-    public sealed class Connection
+    public class Connection
     {
-        private static Connection instance;
-        private static MySqlConnection connection;
-        private readonly string url = "datasource=localhost;username=root;password=;database=app_konter;Convert Zero Datetime=True";
+        private static Connection instance; // [!code ++]
+        private static MySqlConnection connection; // [!code ++]
+        private readonly string url = "datasource=localhost;username=root;password=;database=app_konter;Convert Zero Datetime=True"; // [!code ++]
 
-        private Connection()
-        {
-            try
-            {
-                connection = new MySqlConnection(this.url);
-            }
-            catch (Exception err)
-            {
-                Utils.Notify.notifyError(err);
-            }
-        }
+        private Connection() // [!code ++]
+        { // [!code ++]
+            try // [!code ++]
+            { // [!code ++]
+                connection = new MySqlConnection(this.url); // [!code ++]
+            } // [!code ++]
+            catch (Exception err) // [!code ++]
+            { // [!code ++]
+                Utils.Notify.notifyError(err); // [!code ++]
+            } // [!code ++]
+        } // [!code ++]
 
-        public MySqlConnection getConnection()
-        {
-            return connection;
-        }
+        public MySqlConnection getConnection() // [!code ++]
+        { // [!code ++]
+            return connection; // [!code ++]
+        } // [!code ++]
 
-        public MySqlDataReader Query(string sql)
-        {
-            try
-            {
-                MySqlDataReader response;
-                connection.Close();
-                connection.Open();
-                MySqlCommand query = new MySqlCommand(sql, getConnection());
-                query.ExecuteNonQuery();
-                response = query.ExecuteReader();
-                return response;
-            }
-            catch (Exception error)
-            {
-                Utils.Notify.notifyError(error);
-            }
-            return null;
-        }
+        public MySqlDataReader Query(string sql) // [!code ++]
+        { // [!code ++]
+            try // [!code ++]
+            { // [!code ++]
+                MySqlDataReader response; // [!code ++]
+                connection.Close(); // [!code ++]
+                connection.Open(); // [!code ++]
+                MySqlCommand query = new MySqlCommand(sql, getConnection()); // [!code ++]
+                query.ExecuteNonQuery(); // [!code ++]
+                response = query.ExecuteReader(); // [!code ++]
+                return response; // [!code ++]
+            } // [!code ++]
+            catch (Exception error) // [!code ++]
+            { // [!code ++]
+                Utils.Notify.notifyError(error); // [!code ++]
+            } // [!code ++]
+            return null; // [!code ++]
+        } // [!code ++]
 
-        public static Connection getInstance()
-        {
-            if (instance == null)
-            {
-                instance = new Connection();
-            }
-            return instance;
-
-        }
+        public static Connection getInstance() // [!code ++]
+        { // [!code ++]
+            if (instance == null) // [!code ++]
+            { // [!code ++]
+                instance = new Connection(); // [!code ++]
+            } // [!code ++]
+            return instance; // [!code ++]
+        } // [!code ++]
     }
 }
 ```
