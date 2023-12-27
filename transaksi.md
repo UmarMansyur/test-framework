@@ -5,7 +5,7 @@ Ketika membuat sebuah sistem berbasis Toko Penjualan maka kegiatan transaksi mer
 Buatlah sebuah view dengan nama TransaksiView.cs. Kemudian, desain sistemnya seperti ini:
 <img src="/assets/transaksi.png" alt="transaksi" width="100%">
 
-## Membuat Class Model
+
 Setelah view dibuat, sebagaimana konsep MVC pada pembahasan sebelumnya, selanjutnya kita akan membuat class model. Buatlah sebuah class model dengan nama TransaksiModel.cs. Kemudian, ketikkan kode berikut:
 
 1. TransaksiModel.cs
@@ -51,8 +51,6 @@ namespace project_akhir.Models
 
 ```
 
-## Membuat Class Controller
-
 Buatlah sebuah class controller dengan nama TransaksiController.cs. Kemudian, ketikkan kode berikut:
 
 ```csharp
@@ -80,7 +78,6 @@ namespace project_akhir.Controllers
 }
 ```
 
-## Membuat Class View
 Klik dua kali pada layar TransaksiView.cs. Kemudian, ketikkan kode berikut:
 
 ```csharp
@@ -90,3 +87,11 @@ private void TransaksiKartu_Load(object sender, EventArgs e)
     transaksiController.GetProvider(comboBox1);
 }
 ```
+
+Kode tersebut akan mengisi ComboBox dengan data dari tabel providers. Selanjutnya, kita akan memfilter data dari tabel products berdasarkan provider yang dipilih. Ketikkan kode berikut:
+
+```csharp
+private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+{
+    string 
+}
