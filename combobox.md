@@ -46,7 +46,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace WindowsFormsApplication7.Helpers
+namespace project_akhir.Helpers
 {
     class ComboBox
     {
@@ -93,28 +93,37 @@ private void button1_Click(object sender, EventArgs e)
 
 ```
 
-Jika anda menggunakan database, maka anda dapat menggunakan kode berikut:
+Semisal, kita menggunakan database kemudiann kita ingin mengisi ComboBox dengan data dari database. Maka, kita dapat menggunakan kode berikut:
+
+1. Letakkan kode berikut pada File Controller. Misal, kita akan mengisi ComboBox dengan data dari tabel kategori pada file ProductController.cs
 
 ```csharp
-public void InitializeComboBox()
+public void GetCategories(ComboBox ComboBox1)
 {
-    string query = "SELECT * FROM table";
-    using (SqlConnection connection = new SqlConnection(connectionString))
+    MySqlDataReader categories = this._connection.Query("SELECT * FROM kategori");
+    while (categories.Read())
     {
-        SqlCommand command = new SqlCommand(query, connection);
-        connection.Open();
-        SqlDataReader reader = command.ExecuteReader();
-        while (reader.Read())
-        {
-            ComboBox1.Items.Add(new ComboBox(reader.GetInt32(0), reader.GetString(1)));
-        }
-        reader.Close();
+        ComboBox1.Items.Add(new Helpers.ComboBox(categories.GetInt32(0), categories.GetString(1)));
     }
+    categories.Close();
 }
 ```
 
-ComboBox tidak dapat membedakan antara value dan label. Sehingga cara yang bisa digunakan adalah dengan membuat class ComboBox baru. Kemudian, kita akan mengisi ComboBox dengan class ComboBox yang baru. Namun, dalam class ComboBox yang baru, kita akan membuat 2 properti yaitu Id dan Value. Id akan digunakan untuk menyimpan value dari ComboBox. Sedangkan, Value akan digunakan untuk menyimpan label dari ComboBox. Setelah itu, lakukan overriding pada method ToString() untuk mengembalikan nilai Value.
+2. Buka File BaseController.cs. Kemudian, rubah hak akses dari private menjadi public. Perhatikan kode berikut:
 
+```csharp
+private Config.Connection _connection = Config.Connection.getInstance(); // [!code --]
+public Config.Connection _connection = Config.Connection.getInstance(); // [!code ++]
+```
+3. Kemudian, buka form view. Kemudian, ketikkan kode berikut:
+```csharp
+ProductController productController = new ProductController();
+public void InitializeComboBox()
+{
+   productController.GetCategories(ComboBox1);
+}
+
+```
 ## Mendapatkan Id and Value dari ComboBox
 
 Untuk mendapatkan Id dan Value dari ComboBox, maka dapat dilakukan dengan cara sebagai berikut:
@@ -124,12 +133,19 @@ ComboBox comboBox = (ComboBox)ComboBox1.SelectedItem;
 MessageBox.Show(comboBox.Id.ToString());
 ```
 
-Misalkan dalam view, nilai id akan ditampilkan pada MessageBox. Maka, dalam fungsi ComboBox1_SelectedIndexChanged, kita dapat menambahkan kode berikut:
+Kode di atas akan menampilkan Id dari ComboBox yang dipilih. Jika ingin menampilkan Value, maka dapat menggunakan kode berikut:
+
+```csharp
+ComboBox comboBox = (ComboBox)ComboBox1.SelectedItem;
+MessageBox.Show(comboBox.Value.ToString());
+```
+
+
+## Menampilkan Id dan Value pada ComboBox
 
 ```csharp
 private void category_SelectedIndexChanged(object sender, EventArgs e)
 {
     string item = ((Helpers.ComboBox)category.SelectedItem).Id.ToString();
-    this.ProductModel.kategoriId = item;
 }
 ```

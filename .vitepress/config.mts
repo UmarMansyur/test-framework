@@ -43,11 +43,12 @@ export default defineConfig({
       {
         text: 'Lebih Lanjut',
         items: [
-          { text: 'ComboBox', link: '/combobox' },
           { text: 'Authentication', link: '/authentication' },
           { text: 'MDI Parent', link: '/mdi-parent' },
           { text: 'Base Controller', link: '/base-controller' },
           { text: 'Data Master', link: '/data-master' },
+          { text: 'ComboBox', link: '/combobox' },
+          { text: 'Transaksi', link: '/transaksi' },
         ]
       }
     ],
