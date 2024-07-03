@@ -1,1 +1,0 @@
-import{_ as a,o as s,c as n,Q as l}from"./chunks/framework.1baa841b.js";const d=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"soal.md","filePath":"soal.md","lastUpdated":1719989677000}'),o={name:"soal.md"},p=l("",27),t=[p];function e(i,r,c,u,E,g){return s(),n("div",null,t)}const q=a(o,[["render",e]]);export{d as __pageData,q as default};
