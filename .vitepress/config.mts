@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Pemrograman Visual",
+  title: "Pemrograman Framework",
   description: "Learn how to build desktop application using web technologies",
   themeConfig: {
     lastUpdated: {
@@ -19,36 +19,13 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Beranda', link: '/' },
-      { text: 'Instalasi', link: '/instalasi' }
     ],
 
     sidebar: [
       {
-        text: 'Pengenalan',
+        text: 'Soal Framework',
         items: [
-          { text: 'Instalasi', link: '/instalasi' },
-          { text: 'Membuat Project', link: '/create-project' },
-          { text: 'ToolBox', link: '/toolbox' },
-        ]
-      },
-      {
-        text: 'Basic Manajemen File',
-        items: [
-          { text: 'Controller', link: '/controller' },
-          { text: 'Model', link: '/model' },
-          { text: 'View', link: '/view' },
-          { text: 'Config', link: '/config' },
-        ]
-      },
-      {
-        text: 'Lebih Lanjut',
-        items: [
-          { text: 'Authentication', link: '/authentication' },
-          { text: 'MDI Parent', link: '/mdi-parent' },
-          { text: 'Base Controller', link: '/base-controller' },
-          { text: 'Data Master', link: '/data-master' },
-          { text: 'ComboBox', link: '/combobox' },
-          { text: 'Transaksi', link: '/transaksi' },
+          { text: 'Soal', link: '/soal' }
         ]
       }
     ],

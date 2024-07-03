@@ -3,14 +3,14 @@
 layout: home
 
 hero:
-  name: "Pemrograman Visual"
-  text: "Menggunakan .net dan C#"
-  tagline: "Implementasi MVC"
+  name: "Pemrograman Framework"
+  text: "Salam Kemajuan! Berpikir dan Bertindak Kritis"
+  tagline: "Dokumentasi Soal UAS Praktikum Pemrograman Framework"
   image: https://unira.ac.id/img/logo.png
   actions:
     - theme: brand
       text: Getting Started
-      link: /instalasi
+      link: /soal
     - theme: alt
       text: GitHub
       link: https://github.com/UmarMansyur/desktop-programming
