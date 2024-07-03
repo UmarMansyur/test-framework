@@ -277,6 +277,7 @@ Selamat mengerjakan!
 Silahkan tentukan kelompok anda!
 
 ### Contoh:
+
 Kelompok Wisata Indah:
 1. Umar Mansyur
 2. Umar Bakrie
